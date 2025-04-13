@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title></title><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CMTcOisY.js"></script><link rel="stylesheet" href="/_astro/index.Ck_wQVHS.css"><style>[data-astro-transition-scope="astro-2kdxg6ph-1"] { view-transition-name: img-encuentros; }@layer astro { ::view-transition-old(img-encuentros) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(img-encuentros) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(img-encuentros) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(img-encuentros) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-2kdxg6ph-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-2kdxg6ph-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-2kdxg6ph-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-2kdxg6ph-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-2kdxg6ph-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-2kdxg6ph-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-2kdxg6ph-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-2kdxg6ph-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body class="p-20"> <div>  <div class="flex gap-12"> <aside class="flex flex-col items-center gap-4"> <img src="/img/encuentrosrolon.webp" class="rounded w-72 h-auto" alt="Encuentros rolon" data-astro-transition-scope="astro-2kdxg6ph-1"> <!-- Usamos un server island para volver dinamico --> <!--[if astro]>server-island-start<![endif]--><span class="text-xs opacity-70 animate-spin duration-500"> <img class="w-5" src="/img/loader.svg" alt="loader"> </span><link rel="preload" as="fetch" href="/_server-islands/BookScore?e=default&p=A1F7E5C2DDCEC5805D2C6D7ASmziAvJrIqVmYjNubJJCCCYiLAxDYHOSdE7oXy4YlHf0Fbg%3D&s=%7B%7D" crossorigin="anonymous"><script async type="module" data-astro-rerun data-island-id="b349e2d3-09e2-4352-aee0-9b7ea65f3916">
+let script = document.querySelector('script[data-island-id="b349e2d3-09e2-4352-aee0-9b7ea65f3916"]');
+
+let response = await fetch('/_server-islands/BookScore?e=default&p=A1F7E5C2DDCEC5805D2C6D7ASmziAvJrIqVmYjNubJJCCCYiLAxDYHOSdE7oXy4YlHf0Fbg%3D&s=%7B%7D');
+
+if (script) {
+	if(
+		response.status === 200
+		&& response.headers.has('content-type')
+		&& response.headers.get('content-type').split(";")[0].trim() === 'text/html') {
+		let html = await response.text();
+
+		// Swap!
+		while(script.previousSibling &&
+			script.previousSibling.nodeType !== 8 &&
+			script.previousSibling.data !== '[if astro]>server-island-start<![endif]') {
+			script.previousSibling.remove();
+		}
+		script.previousSibling?.remove();
+
+		let frag = document.createRange().createContextualFragment(html);
+		script.before(frag);
+	}
+	script.remove(); // Prior to v5.4.2, this was the trick to force rerun of scripts.  Keeping it to minimize change to the existing behavior.
+}
+</script> <!-- enlace para comprar --> <!--[if astro]>server-island-start<![endif]--><link rel="preload" as="fetch" href="/_server-islands/BuyButton?e=default&p=ACE630BCBC2053FA132DBBD6OtrKTelXqfpx8IqrVndyf1Z1lKciKR%2FKn9Z0mzXCXWNbRyYWoq1MR1w%2FzlErhmShq4URePxS1i2uTQOLCu%2BZxLvs6NBdCK1FRVAkCXIOkR5K5PpcVKLt6PTtp1UIY2HSCDK5lY1dubDOLwRk0nxXErD6Pyc1NviH%2FD6Nf29jmW4EnDPMyIEo4MAs8QVMEoCyNsi5s1WqxunI4WWwIkdVUhK14%2BPbDcEh2IzZaw%3D%3D&s=%7B%7D" crossorigin="anonymous"><script async type="module" data-astro-rerun data-island-id="ec0f880f-2f84-499a-9119-8e0131c33edd">
+let script = document.querySelector('script[data-island-id="ec0f880f-2f84-499a-9119-8e0131c33edd"]');
+
+let response = await fetch('/_server-islands/BuyButton?e=default&p=ACE630BCBC2053FA132DBBD6OtrKTelXqfpx8IqrVndyf1Z1lKciKR%2FKn9Z0mzXCXWNbRyYWoq1MR1w%2FzlErhmShq4URePxS1i2uTQOLCu%2BZxLvs6NBdCK1FRVAkCXIOkR5K5PpcVKLt6PTtp1UIY2HSCDK5lY1dubDOLwRk0nxXErD6Pyc1NviH%2FD6Nf29jmW4EnDPMyIEo4MAs8QVMEoCyNsi5s1WqxunI4WWwIkdVUhK14%2BPbDcEh2IzZaw%3D%3D&s=%7B%7D');
+
+if (script) {
+	if(
+		response.status === 200
+		&& response.headers.has('content-type')
+		&& response.headers.get('content-type').split(";")[0].trim() === 'text/html') {
+		let html = await response.text();
+
+		// Swap!
+		while(script.previousSibling &&
+			script.previousSibling.nodeType !== 8 &&
+			script.previousSibling.data !== '[if astro]>server-island-start<![endif]') {
+			script.previousSibling.remove();
+		}
+		script.previousSibling?.remove();
+
+		let frag = document.createRange().createContextualFragment(html);
+		script.before(frag);
+	}
+	script.remove(); // Prior to v5.4.2, this was the trick to force rerun of scripts.  Keeping it to minimize change to the existing behavior.
+}
+</script> </aside> <main class="max-w-3xl"> <h1 class="text-4xl font-bold mb-4">Encuentros rolon</h1> <div class="prose prose-invert"> <p>“No es cierto que el amor todo lo puede. No es cierto que el que ama no puede engañar. No es cierto que a la relación amorosa no haya que ponerle condiciones. No es cierto que el amor y el deseo vayan siempre de la mano. Pero decir que todo esto no es cierto no implica que sea imposible”, escribía Gabriel Rolón en el epílogo de la versión original de este libro en 2012.</p>
+<p>El amor. Sí, Encuentros se metió de lleno en los pliegues de un tema tan antiguo como la humanidad y salió airoso de la tormenta: en el año de su lanzamiento, más de ciento cincuenta mil lectores eligieron apostar por la aventura e hicieron de este libro el más vendido del año en la Argentina. Por sus páginas desfilan los celos y el deseo, la infidelidad, la pareja y la sexualidad, las relaciones entre padres e hijos, el enamoramiento y la ilusión de lo “eterno”. Este “lado B del amor” cuestionó sin miramientos los lugares comunes y decires cotidianos que, más de una vez, nos precipitan con su vértigo hacia la angustia, el dolor y la desilusión.</p> </div> </main> </div>  </div>  </body></html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title></title><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CMTcOisY.js"></script><link rel="stylesheet" href="/_astro/index.Ck_wQVHS.css"><style>[data-astro-transition-scope="astro-2kdxg6ph-1"] { view-transition-name: img-historias-de-divan; }@layer astro { ::view-transition-old(img-historias-de-divan) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(img-historias-de-divan) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(img-historias-de-divan) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(img-historias-de-divan) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-2kdxg6ph-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-2kdxg6ph-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-2kdxg6ph-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-2kdxg6ph-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-2kdxg6ph-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-2kdxg6ph-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-2kdxg6ph-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-2kdxg6ph-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body class="p-20"> <div>  <div class="flex gap-12"> <aside class="flex flex-col items-center gap-4"> <img src="/img/historiasdivan.jpg" class="rounded w-72 h-auto" alt="Historias de divan" data-astro-transition-scope="astro-2kdxg6ph-1"> <!-- Usamos un server island para volver dinamico --> <!--[if astro]>server-island-start<![endif]--><span class="text-xs opacity-70 animate-spin duration-500"> <img class="w-5" src="/img/loader.svg" alt="loader"> </span><link rel="preload" as="fetch" href="/_server-islands/BookScore?e=default&p=29EEA86B9BF09F0D3F6F1138RODOh2d7krOqsDW%2FDBCwF5fvnBBNrB7hy5lOOQUUixl7Q819LPoSWTdzYA%3D%3D&s=%7B%7D" crossorigin="anonymous"><script async type="module" data-astro-rerun data-island-id="93e87585-6f76-4c63-9470-aa4dc39a302e">
+let script = document.querySelector('script[data-island-id="93e87585-6f76-4c63-9470-aa4dc39a302e"]');
+
+let response = await fetch('/_server-islands/BookScore?e=default&p=29EEA86B9BF09F0D3F6F1138RODOh2d7krOqsDW%2FDBCwF5fvnBBNrB7hy5lOOQUUixl7Q819LPoSWTdzYA%3D%3D&s=%7B%7D');
+
+if (script) {
+	if(
+		response.status === 200
+		&& response.headers.has('content-type')
+		&& response.headers.get('content-type').split(";")[0].trim() === 'text/html') {
+		let html = await response.text();
+
+		// Swap!
+		while(script.previousSibling &&
+			script.previousSibling.nodeType !== 8 &&
+			script.previousSibling.data !== '[if astro]>server-island-start<![endif]') {
+			script.previousSibling.remove();
+		}
+		script.previousSibling?.remove();
+
+		let frag = document.createRange().createContextualFragment(html);
+		script.before(frag);
+	}
+	script.remove(); // Prior to v5.4.2, this was the trick to force rerun of scripts.  Keeping it to minimize change to the existing behavior.
+}
+</script> <!-- enlace para comprar --> <!--[if astro]>server-island-start<![endif]--><link rel="preload" as="fetch" href="/_server-islands/BuyButton?e=default&p=CDB1AB9C3AF4FC2C37AC8486u6%2FzkUsy3T%2BKXZDwRiuUhGlql1KM4nK4Uy0ZK3ZbWb4xsUxWuk%2FHP23ZoCN3XTBePMbI2i0WYLUlDVDznfoJGFeJNf1MA8ggxEHX9J9VFGN3XnFMTr4ufPfkmHt%2Fy32yEoyxWOuPQrwLcmp9Ix88Q1sgCW4b%2B8ALtJ9ZSZ1bdf90w6w2%2Ba%2FiHp2QNnZOHnL6fhv8%2Bt6oclAAMqUiN7JiqrQ9OpWMFOgZWQ7DdmBPxuob8bNSnw%3D%3D&s=%7B%7D" crossorigin="anonymous"><script async type="module" data-astro-rerun data-island-id="daf73c26-664b-48bb-914f-397f41075be3">
+let script = document.querySelector('script[data-island-id="daf73c26-664b-48bb-914f-397f41075be3"]');
+
+let response = await fetch('/_server-islands/BuyButton?e=default&p=CDB1AB9C3AF4FC2C37AC8486u6%2FzkUsy3T%2BKXZDwRiuUhGlql1KM4nK4Uy0ZK3ZbWb4xsUxWuk%2FHP23ZoCN3XTBePMbI2i0WYLUlDVDznfoJGFeJNf1MA8ggxEHX9J9VFGN3XnFMTr4ufPfkmHt%2Fy32yEoyxWOuPQrwLcmp9Ix88Q1sgCW4b%2B8ALtJ9ZSZ1bdf90w6w2%2Ba%2FiHp2QNnZOHnL6fhv8%2Bt6oclAAMqUiN7JiqrQ9OpWMFOgZWQ7DdmBPxuob8bNSnw%3D%3D&s=%7B%7D');
+
+if (script) {
+	if(
+		response.status === 200
+		&& response.headers.has('content-type')
+		&& response.headers.get('content-type').split(";")[0].trim() === 'text/html') {
+		let html = await response.text();
+
+		// Swap!
+		while(script.previousSibling &&
+			script.previousSibling.nodeType !== 8 &&
+			script.previousSibling.data !== '[if astro]>server-island-start<![endif]') {
+			script.previousSibling.remove();
+		}
+		script.previousSibling?.remove();
+
+		let frag = document.createRange().createContextualFragment(html);
+		script.before(frag);
+	}
+	script.remove(); // Prior to v5.4.2, this was the trick to force rerun of scripts.  Keeping it to minimize change to the existing behavior.
+}
+</script> </aside> <main class="max-w-3xl"> <h1 class="text-4xl font-bold mb-4">Historias de divan</h1> <div class="prose prose-invert"> <p>Hace diez años, Gabriel Rolón iniciaba un viaje único de la mano de la publicación de Historias de diván. Un recorrido que no sólo lo convertiría en el escritor más vendido de la Argentina de la última década, sino que también le permitió llevar adelante una misión que él mismo se impuso desde el sostener el psicoanálisis en el lugar que merece como una disciplina capaz de transformar una vida, de dar alivio a quien padece un dolor.</p>
+<p>Hoy, con la mirada puesta en el espejo y en retrospectiva, fueron muchas las cosas que más de 300000 ejemplares vendidos, traducciones al francés, portugués, alemán e italiano, series de televisión, obras de teatro, charlas, debates y congresos internacionales. Para agradecer una relación única entre un autor y sus lectores, y celebrar diez años de amistad es esta edición de Diez historias de diván. Pero también, para poder decir misión Gabriel Rolón supo marcar –como nadie– un antes y un después en la difusión y en la defensa del psicoanálisis.</p> </div> </main> </div>  </div>  </body></html>
