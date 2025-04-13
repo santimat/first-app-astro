@@ -45,7 +45,24 @@ export const prerender = true;
             </BookScore>
 
             <!-- enlace para comprar -->
-            {SHOW_BUY_BUTTON && <BuyButton server:defer buy={buy} />}
+            {
+                SHOW_BUY_BUTTON && (
+                    <BuyButton server:defer buy={buy}>
+                        <a
+                            title="Comprar libro"
+                            target="_blank"
+                            class="flex items-center gap-1 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 hover:scale-105 hover:cursor-pointer transition"
+                        >
+                            Comprar en amazon
+                            <img
+                                class="w-4"
+                                src="/img/amazon-logo.svg"
+                                alt="logo amazon"
+                            />
+                        </a>
+                    </BuyButton>
+                )
+            }
         </aside>
 
         <main class="max-w-3xl">
