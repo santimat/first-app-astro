@@ -1,22 +1,36 @@
+---
+import "../styles/global.css";
+import { ClientRouter } from "astro:transitions"; // <- transiciones de paginas
+const { title } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>{title}</title>
+        <ClientRouter />
+    </head>
+    <body class="p-20">
+        <div>
+            <slot />
+        </div>
+    </body><style is:global>
+        * {
+            box-sizing: border-box;
+        }
+        html {
+            font-family: system-ui, sans-serif;
+            background: #13151a;
+            color: #fff;
+        }
+        body {
+            @apply grid place-content-center;
+        }
+        body > div {
+            @apply container;
+        }
+    </style>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

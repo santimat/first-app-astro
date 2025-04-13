@@ -1,0 +1,58 @@
+---
+import { getCollection, render } from "astro:content";
+import { SHOW_BUY_BUTTON } from "astro:env/server"; // <- leemos de variables de entorno
+import Layout from "../../layouts/Layout.astro";
+import BookScore from "../../components/BookScore.astro";
+import BuyButton from "../../components/BuyButton.astro";
+
+export const getStaticPaths = async () => {
+    const books = await getCollection("books");
+
+    return books.map((book) => ({
+        params: { id: book.slug }, // <- recuperamos el slug del libro (identicador unico)
+        props: { book }, // <- lo pasamos como id de la ruta
+    }));
+};
+
+const { book } = Astro.props;
+const { data, slug } = book;
+const { title, author, img, readtime, description, buy } = data;
+
+// Obtenemos el contenido de la coleccion
+const { Content } = await render(book); // <- renderizamos el contenido del libro
+
+export const prerender = true;
+---
+
+<Layout title="">
+    <div class="flex gap-12">
+        <aside class="flex flex-col items-center gap-4">
+            <img
+                transition:name={`img-${slug}`}
+                src={`/img/${img}`}
+                class="rounded w-72 h-auto"
+                alt={title}
+            />
+            <!-- Usamos un server island para volver dinamico -->
+            <BookScore server:defer id={slug}>
+                <!-- Esto se va a mostrar mientras se renderiza el server-island -->
+                <span
+                    slot="fallback"
+                    class="text-xs opacity-70 animate-spin duration-500"
+                >
+                    <img class="w-5" src="/img/loader.svg" alt="loader" />
+                </span>
+            </BookScore>
+
+            <!-- enlace para comprar -->
+            {SHOW_BUY_BUTTON && <BuyButton server:defer buy={buy} />}
+        </aside>
+
+        <main class="max-w-3xl">
+            <h1 class="text-4xl font-bold mb-4">{title}</h1>
+            <div class="prose prose-invert">
+                <Content />
+            </div>
+        </main>
+    </div>
+</Layout>

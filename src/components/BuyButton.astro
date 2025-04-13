@@ -1,0 +1,22 @@
+---
+const ARG = "AR";
+
+const country = Astro.request.headers.get("x-Vercel-IP-country") ?? ARG; // <- obtener pais desde las cabeceras de vercel
+
+const storeCountry = country === "AR" ? "arg" : "usa"; //
+const countryName = country === "AR" ? "Argentina" : "USA";
+
+const { buy } = Astro.props;
+
+const url = buy[storeCountry]; // <- url correspondiente segun el pais
+---
+
+<a
+    href={url}
+    title="Comprar libro"
+    target="_blank"
+    class="flex items-center gap-1 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 hover:scale-105 hover:cursor-pointer transition"
+>
+    Comprar en amazon {countryName}
+    <img class="w-4" src="/img/amazon-logo.svg" alt="logo amazon" />
+</a>
